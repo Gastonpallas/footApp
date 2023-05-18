@@ -1,14 +1,10 @@
-# Expo Router Example
+# Commandes utiles
+## Installations
+npx create-expo-app@latest -e with-router ./ -> install app
 
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+npm install expo-font axios react-native-dotenv
 
-## 🚀 How to use
+## Manips
+npm install -g expo-cli -> allow QR code phone
 
-```sh
-npx create-expo-app -e with-router
-```
-
-## 📝 Notes
-
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
+expo-cli start --tunnel -> start application
