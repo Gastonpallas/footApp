@@ -3,6 +3,7 @@ import {View, ScrollView, SafeAreaView} from 'react-native';
 import {Stack, useRouter} from "expo-router";
 import {COLORS, icons, images, SIZES} from "../constants";
 import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome } from "../components"
+import heart from "../assets/icons/heart.png";
 
 const Home =() => {
 
@@ -17,7 +18,7 @@ const Home =() => {
                     headerLeft: () =>(
                         <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
                     ),headerRight: () =>(
-                        <ScreenHeaderBtn iconUrl={icons.menu} dimension="100%" />
+                        <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />
                     ),
                     headerTitle:""
             }}/>
