@@ -22,14 +22,14 @@ const Home =() => {
     };
 
     return(
-        <SafeAreaView>
+        <SafeAreaView className="bg-black" >
             <Stack.Screen
                 options={
                     {
                         headerTitle:"",
                         headerShadowVisible : false,
                         headerLeft: () => <ScreenHeaderBtn text={'Ligues'} onPress={() => handleLeftButtonPress()} />,
-                        headerRight: () => <ScreenHeaderBtn text={'Club'} onPress={() => handleRightButtonPress()} />
+                        headerRight: () => <ScreenHeaderBtn text={'Clubs'} onPress={() => handleRightButtonPress()} />
 
                     }}
             />
