@@ -35,6 +35,8 @@ const LigueCard = ({text, onPress}) => {
             link = LEAGUES.IMG + "/" + LEAGUE.ITALY
             console.log(link)
             break;
+        default:
+            break;
     }
 
     return (
