@@ -14,14 +14,35 @@ const LigueCard = ({text, onPress}) => {
         case "Ligue 1":
             link = LEAGUES.IMG + "/" + LEAGUE.FRANCE
             console.log(link)
+            break;
 
+        case "Liga":
+            link = LEAGUES.IMG + "/" + LEAGUE.SPAIN
+            console.log(link)
+            break;
+
+        case "BundesLiga":
+            link = LEAGUES.IMG + "/" + LEAGUE.GERMANY
+            console.log(link)
+            break;
+
+        case "Premier League":
+            link = LEAGUES.IMG + "/" + LEAGUE.ENGLAND
+            console.log(link)
+            break;
+
+        case "Serie A":
+            link = LEAGUES.IMG + "/" + LEAGUE.ITALY
+            console.log(link)
+            break;
     }
 
     return (
         <TouchableOpacity onPress={onPress}>
 
             <Image
-                source={{uri: "https://footstatsapi.sangmin.fr/api/images/leagues/Ligue%201"}}
+                source={{ uri: link }}
+                style={{ width: 100, height: 100 }}
                 resizeMode="cover"
             />
             <Text>

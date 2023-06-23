@@ -1,12 +1,14 @@
-import {StatusBar, Text, View} from "react-native";
+import React from 'react';
+import { View, Image } from 'react-native';
 
 const Clubs = () => {
+    const imageURL = 'https://footstatsapi.sangmin.fr/api/images/leagues/Ligue%201';
 
-    return(
-        <View className  ="flex-1 justify-center bg-blue-950">
-        <Text>Open up App.js to start working on your app!</Text>
-        <StatusBar style="auto" />
-    </View>)
+    return (
+        <View>
+            <Image source={{ uri: imageURL }} style={{ width: 200, height: 200 }} />
+        </View>
+    );
+};
 
-}
-export default Clubs
+export default Clubs;
