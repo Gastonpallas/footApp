@@ -7,33 +7,28 @@ import LEAGUE from "../../data/constants";
 
 const LigueCard = ({text, onPress}) => {
 
-    let link = null
+    let link = LEAGUES.IMG + "/";
 
     switch ({text}.text){
 
         case "Ligue 1":
-            link = LEAGUES.IMG + "/" + LEAGUE.FRANCE
-            console.log(link)
+            link += LEAGUE.FRANCE
             break;
 
         case "Liga":
-            link = LEAGUES.IMG + "/" + LEAGUE.SPAIN
-            console.log(link)
+            link += LEAGUE.SPAIN
             break;
 
         case "BundesLiga":
-            link = LEAGUES.IMG + "/" + LEAGUE.GERMANY
-            console.log(link)
+            link += LEAGUE.GERMANY
             break;
 
         case "Premier League":
-            link = LEAGUES.IMG + "/" + LEAGUE.ENGLAND
-            console.log(link)
+            link += LEAGUE.ENGLAND
             break;
 
         case "Serie A":
-            link = LEAGUES.IMG + "/" + LEAGUE.ITALY
-            console.log(link)
+            link += LEAGUE.ITALY
             break;
         default:
             break;
