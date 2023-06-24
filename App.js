@@ -9,18 +9,22 @@ const Tab = createBottomTabNavigator();
 
 const App = () => {
     return (
-        <NavigationContainer>
-            <Tab.Navigator
-                tabBar={CustomTabBar}
-                screenOptions={{
-                    headerShown: false, // Masque la barre de navigation en haut
-                }}
-            >
-                <Tab.Screen name="Ligues" component={Ligues} />
-                <Tab.Screen name="Clubs" component={Clubs} />
 
-            </Tab.Navigator>
-        </NavigationContainer>
+        <Ligues/>
+
+
+        // <NavigationContainer>
+        //     <Tab.Navigator
+        //         tabBar={CustomTabBar}
+        //         screenOptions={{
+        //             headerShown: false, // Masque la barre de navigation en haut
+        //         }}
+        //     >
+        //         <Tab.Screen name="Ligues" component={Ligues} />
+        //         <Tab.Screen name="Clubs" component={Clubs} />
+        //
+        //     </Tab.Navigator>
+        // </NavigationContainer>
     );
 };
 

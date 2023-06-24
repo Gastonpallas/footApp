@@ -1,16 +1,17 @@
-import {Text} from "react-native";
+import {Text, View} from "react-native";
 
 
-const LigueDetails = () =>{
 
-    return(
+const LigueDetails = ({ route }) => {
+    const { text } = route.params;
 
-        <Text>
-            LigueDetails
-        </Text>
+    //Appel a API
 
-    )
-
-}
+    return (
+        <View>
+            <Text>{text}</Text>
+        </View>
+    );
+};
 
 export default LigueDetails;
