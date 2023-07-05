@@ -4,23 +4,6 @@ import { LEAGUES } from "../../data/Api";
 import LEAGUE from "../../data/constants";
 import {COLORS} from "../../data/COLORS";
 
-const styles = StyleSheet.create({
-    container: {
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: COLORS.onyx,
-        padding: 10,
-    },
-    image: {
-        width: 100,
-        height: 100,
-    },
-    text: {
-        color: COLORS.tiffanyBlue,
-        marginTop: 10,
-    },
-});
-
 const LigueCard = ({ text, onPress }) => {
     let link = LEAGUES.IMG + "/";
 
@@ -56,4 +39,27 @@ const LigueCard = ({ text, onPress }) => {
     );
 };
 
+const styles = StyleSheet.create({
+    container: {
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: COLORS.gray,
+        padding: 10,
+        width: "45%",
+        height: "100%",
+        borderWidth: 1,
+        borderColor: COLORS.tiffanyBlue,
+        borderRadius: 10,
+
+
+    },
+    image: {
+        width: "80%",
+        height: "63%",
+    },
+    text: {
+        color: COLORS.tiffanyBlue,
+        marginTop: 10,
+    },
+});
 export default LigueCard;

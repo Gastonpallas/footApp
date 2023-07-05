@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import {LEAGUES} from "../data/Api";
-import LEAGUE from "../data/constants";
+import {COLORS} from "../data/COLORS";
 
 const LigueDetails = ({ route }) => {
     const { text } = route.params;
@@ -54,13 +54,30 @@ const LigueDetails = ({ route }) => {
     }, []);
 
     return (
-        <View>
-            <Text>{text}</Text>
+        <View style={styles.pastille}>
+            <Text style={styles.text}>{text}</Text>
             {clubNames.map((name) => (
                 <Text key={name}>{name}</Text>
             ))}
         </View>
     );
 };
+
+
+const styles = StyleSheet.create({
+    pastille: {
+        backgroundColor: COLORS.powderBlue,
+        width: "33.33%",
+        paddingVertical: 10,
+        paddingHorizontal: 5,
+        borderRadius: 10,
+        marginRight: 10,
+        marginBottom: 10,
+    },
+    text: {
+        color: "#ffffff",
+        marginTop: 10,
+    },
+});
 
 export default LigueDetails;
