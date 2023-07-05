@@ -1,52 +1,59 @@
-import {Text, TouchableOpacity} from "react-native";
+import { StyleSheet, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
-import {Image} from "react-native";
-import {LEAGUES} from "../../data/Api";
+import { LEAGUES } from "../../data/Api";
 import LEAGUE from "../../data/constants";
+import {COLORS} from "../../data/COLORS";
 
+const styles = StyleSheet.create({
+    container: {
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: COLORS.onyx,
+        padding: 10,
+    },
+    image: {
+        width: 100,
+        height: 100,
+    },
+    text: {
+        color: COLORS.tiffanyBlue,
+        marginTop: 10,
+    },
+});
 
-const LigueCard = ({text, onPress}) => {
-
+const LigueCard = ({ text, onPress }) => {
     let link = LEAGUES.IMG + "/";
 
-    switch ({text}.text){
-
+    switch (text) {
         case "Ligue 1":
-            link += LEAGUE.FRANCE
+            link += LEAGUE.FRANCE;
             break;
-
         case "Liga":
-            link += LEAGUE.SPAIN
+            link += LEAGUE.SPAIN;
             break;
-
-        case "BundesLiga":
-            link += LEAGUE.GERMANY
+        case "Bundesliga":
+            link += LEAGUE.GERMANY;
             break;
-
         case "Premier League":
-            link += LEAGUE.ENGLAND
+            link += LEAGUE.ENGLAND;
             break;
-
         case "Serie A":
-            link += LEAGUE.ITALY
+            link += LEAGUE.ITALY;
             break;
         default:
             break;
     }
 
     return (
-        <TouchableOpacity onPress={onPress}>
-
+        <TouchableOpacity onPress={onPress} style={styles.container}>
             <Image
                 source={{ uri: link }}
-                style={{ width: 100, height: 100 }}
+                style={styles.image}
                 resizeMode="cover"
             />
-            <Text>
-                {text}
-            </Text>
+            <Text style={styles.text}>{text}</Text>
         </TouchableOpacity>
-    )
-}
+    );
+};
 
-export default LigueCard
+export default LigueCard;
