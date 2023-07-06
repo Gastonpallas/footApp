@@ -30,7 +30,6 @@ const LiguesScreen = ({ navigation }) => {
             style={styles.backgroundImage}
             resizeMode="cover"
         >
-
         <SafeAreaView style={styles.container}>
 
             <View style={styles.view}>
@@ -63,7 +62,6 @@ const styles = StyleSheet.create({
     view: {
         height :"31%",
         width :"100%",
-
         flexDirection: 'row',
         justifyContent: 'space-around',
         marginBottom: "5%",

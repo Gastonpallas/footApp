@@ -14,7 +14,7 @@ const LigueCard = ({ text, onPress }) => {
         case "Liga":
             link += LEAGUE.SPAIN;
             break;
-        case "Bundesliga":
+        case "BundesLiga":
             link += LEAGUE.GERMANY;
             break;
         case "Premier League":
